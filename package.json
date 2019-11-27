@@ -1,0 +1,31 @@
+{
+  "name": "image-playground",
+  "version": "1.0.0",
+  "description": "an image playground",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/gulp watch"
+  },
+  "author": "Jared Harbison",
+  "license": "MIT",
+  "engines": {
+    "node": "12.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaredHarbison/image-playground"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "merge-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  }
+}
