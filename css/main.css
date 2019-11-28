@@ -23,26 +23,39 @@
   height: 100%;
   width: 100%; }
 
+.rom-cutout-upside {
+  background-image: url(../assets/images/rom-cutout-upside.png);
+  position: absolute;
+  z-index: 60;
+  height: 150%;
+  width: 100%;
+  top: -50%;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  opacity: .75; }
+
 /*////////////////////////////////////////////////////////////////////
 ////////// cranes positioned and z-indexed ///////////////////////////
 ////////////////////////////////////////////////////////////////////*/
-.rom-cutout-upside {
-  position: absolute;
-  z-index: 60;
-  height: 100%;
-  opacity: .85;
-  width: 100%;
-  top: -15%; }
-
 .rom-crane {
+  background-image: url(../assets/images/rom-crane.png);
   position: absolute;
   z-index: 100;
-  width: 80%;
-  max-width: 700px; }
+  height: 100%;
+  width: 100%;
+  max-width: 700px;
+  background-repeat: no-repeat;
+  background-size: contain; }
 
 .rom-crane-mirror {
-  position: absolute;
-  z-index: 120;
-  width: 80%;
+  background-image: url(../assets/images/rom-crane-mirror.png);
   right: 0px;
-  max-width: 700px; }
+  background-clip: padding-box;
+  position: absolute;
+  z-index: 50;
+  height: 100%;
+  width: 100%;
+  max-width: 700px;
+  background-repeat: no-repeat;
+  background-size: cover; }
