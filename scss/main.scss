@@ -1,7 +1,6 @@
 /*////////////////////////////////////////////////////////////////////
 ////////// fixed and styled Royal Ontario Museum layers //////////////
 ////////////////////////////////////////////////////////////////////*/
-
 .background-rom-and-moon {
 	background-image: url(../assets/images/rom-and-moon.png);
     background-attachment: fixed;
@@ -10,24 +9,29 @@
 	background-size: cover;
 	position: fixed; 
 	height: 100%;
-    width: 100%;
-}
-
+    width: 100%;}
 .background-rom-cutout {
 	background-image: url(../assets/images/rom-cutout-downside.png);
-	position: fixed; z-index: 30; //first//
+	position: fixed; z-index: 50; //first//
 	background-color: transparent;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	height: 100%; 
-	width: 100%; 
-}
-
+	width: 100%; }
 .rom-cutout-upside {
-	position: absolute; z-index: 50; //second//
+	position: absolute; z-index: 60; //second//
 	height:100%; 
 	opacity:.85;
-	width:100%;
-}
+	width:100%;}
+/*////////////////////////////////////////////////////////////////////
+////////// cranes positioned and z-indexed ///////////////////////////
+////////////////////////////////////////////////////////////////////*/
+.rom-crane {
+	position: absolute; z-index: 100; //third//
+	width: 80%; max-width:700px;}
+.rom-crane-mirror {
+	position: absolute; z-index: 120; //fourth//
+	width: 80%;
+	right: 0px; max-width:700px;}

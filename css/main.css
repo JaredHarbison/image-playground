@@ -14,7 +14,7 @@
 .background-rom-cutout {
   background-image: url(../assets/images/rom-cutout-downside.png);
   position: fixed;
-  z-index: 30;
+  z-index: 50;
   background-color: transparent;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -25,7 +25,23 @@
 
 .rom-cutout-upside {
   position: absolute;
-  z-index: 50;
+  z-index: 60;
   height: 100%;
   opacity: .85;
   width: 100%; }
+
+/*////////////////////////////////////////////////////////////////////
+////////// cranes positioned and z-indexed ///////////////////////////
+////////////////////////////////////////////////////////////////////*/
+.rom-crane {
+  position: absolute;
+  z-index: 100;
+  width: 80%;
+  max-width: 700px; }
+
+.rom-crane-mirror {
+  position: absolute;
+  z-index: 120;
+  width: 80%;
+  right: 0px;
+  max-width: 700px; }
