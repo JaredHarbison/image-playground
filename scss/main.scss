@@ -1,3 +1,9 @@
+
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  animation-play-state: paused !important;
+}	/* to have animations wait for the background image */
 /*////////////////////////////////////////////////////////////////////
 ////////// fixed and styled Royal Ontario Museum layers //////////////
 ////////////////////////////////////////////////////////////////////*/
@@ -12,7 +18,7 @@
     width: 100%;}
 .background-rom-cutout {
 	background-image: url(../assets/images/rom-cutout-downside.png);
-	position: fixed; z-index: 50; //first//
+	position: fixed; z-index: 50 /*first base*/; 
 	background-color: transparent;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
@@ -22,40 +28,42 @@
 	width: 100%;}
 .rom-cutout-upside {
 	background-image: url(../assets/images/rom-cutout-upside.png);
-	position: absolute; z-index: 60; //second//
+	position: absolute; z-index: 100 /*second base*/; 
 	height: 150%; width: 100%; top: -50%;
+	background-repeat: no-repeat;
 	background-position: center;
-	background-size: cover;
-	object-fit: cover;
+	background-size: cover; 
 	opacity:.75;}
 /*////////////////////////////////////////////////////////////////////
 ////////// cranes positioned and z-indexed ///////////////////////////
 ////////////////////////////////////////////////////////////////////*/
 .rom-crane {
 	background-image: url(../assets/images/rom-crane.png);
-	position: absolute; z-index: 100; //third//
+	position: absolute; z-index: 25 /*third*/; 
 	height: 100%; width: 100%; max-width:700px; 
-	background-repeat: no-repeat;
+	background-repeat: no-repeat; background-position: top;
 	background-size: contain;}
 .rom-crane-mirror {
 	background-image: url(../assets/images/rom-crane-mirror.png);
 	right: 0px; background-clip: padding-box;
-	position: absolute; z-index: 50; //fourth//
+	position: absolute; z-index: 50 /*fourth*/; 
 	height: 100%; width: 100%; max-width:700px; 
-	background-repeat: no-repeat;
-	background-size: cover;}
-/*///////////////////////////////////////////////////*/
-/*///////////////////////////////////////////////////*/
-/* SVG logo animation ///////////////////////////////*/
-/*///////////////////////////////////////////////////*/
-/*///////////////////////////////////////////////////*/
+	background-repeat: no-repeat; background-position: bottom;
+	background-size: contain;}
+/*////////////////////////////////////////////////////////////////////
+////////// SVG logo animation ////////////////////////////////////////
+////////////////////////////////////////////////////////////////////*/
+				// to update SVG the SVG logo... 
+				// 1) copy the new SVG code into index.html 
+				// 2) run index.js SVG dasharray & dashoffset calculator
+				// 3) copy & paste console.logs into logo path css below
+				// ** would love to eventually recreate with SASS 
 #logo {
-	top: 7vh; left: 2%;
-	max-width: 90%;
-	will-change: transform;
-	justify-content: center; display: flex;
-	position: absolute; z-index: 120;
-	animation: fill 5s ease forwards 5s;}
+	position: absolute; z-index: 120 /*fifth*/; 
+	max-width: 90%; top: 42.5%; left: 2.5%;
+	animation: fill 5s ease forwards 5s; 
+	transform: rotate(-30deg);
+	will-change: transform}
 #logo path:nth-child(0){
 	stroke-dasharray: 224.5863037109375px;
 	stroke-dashoffset: 224.5863037109375px;
@@ -64,55 +72,55 @@
 	stroke-dasharray: 313.8846435546875px;
 	stroke-dashoffset: 313.8846435546875px;
 	animation: line-anim 2s ease forwards 1.5s}
-#logo path:nth-child(2){
+#logo path:nth-child(2){ /* J */
 	stroke-dasharray: 357.9700622558594px;
 	stroke-dashoffset: 357.9700622558594px;
 	animation: line-anim 2s ease forwards 1.75s}
-#logo path:nth-child(3){
+#logo path:nth-child(3){ /* A */
 	stroke-dasharray: 345.18798828125px;
 	stroke-dashoffset: 345.18798828125px;
 	animation: line-anim 2s ease forwards 2s}
-#logo path:nth-child(4){
+#logo path:nth-child(4){ /* R */
 	stroke-dasharray: 338.9677734375px;
 	stroke-dashoffset: 338.9677734375px;
 	animation: line-anim 2s ease forwards 2.25s}
-#logo path:nth-child(5){
+#logo path:nth-child(5){ /* E */
 	stroke-dasharray: 361.4064025878906px;
 	stroke-dashoffset: 361.4064025878906px;
 	animation: line-anim 2s ease forwards 2.5s}
-#logo path:nth-child(6){
+#logo path:nth-child(6){ /* D */
 	stroke-dasharray: 313.8856201171875px;
 	stroke-dashoffset: 313.8856201171875px;
 	animation: line-anim 2s ease forwards 2.75s}
-#logo path:nth-child(7){
+#logo path:nth-child(7){ /* H */
 	stroke-dasharray: 357.9678039550781px;
 	stroke-dashoffset: 357.9678039550781px;
 	animation: line-anim 2s ease forwards 3s}
-#logo path:nth-child(8){
+#logo path:nth-child(8){ /* A */
 	stroke-dasharray: 373.00531005859375px;
 	stroke-dashoffset: 373.00531005859375px;
 	animation: line-anim 2s ease forwards 3.25s}
-#logo path:nth-child(9){
+#logo path:nth-child(9){ /* R */
 	stroke-dasharray: 294.6239013671875px;
 	stroke-dashoffset: 294.6239013671875px;
 	animation: line-anim 2s ease forwards 3.5s}
-#logo path:nth-child(10){
+#logo path:nth-child(10){ /* B */
 	stroke-dasharray: 346.8218994140625px;
 	stroke-dashoffset: 346.8218994140625px;
 	animation: line-anim 2s ease forwards 3.75s}
-#logo path:nth-child(11){
+#logo path:nth-child(11){ /* I */
 	stroke-dasharray: 331.6251220703125px;
 	stroke-dashoffset: 331.6251220703125px;
 	animation: line-anim 2s ease forwards 4s}
-#logo path:nth-child(12){
+#logo path:nth-child(12){ /* S */
 	stroke-dasharray: 387.89849853515625px;
 	stroke-dashoffset: 387.89849853515625px;
 	animation: line-anim 2s ease forwards 4.25s}
-#logo path:nth-child(13){
+#logo path:nth-child(13){ /* 0 */
 	stroke-dasharray: 224.5863037109375px;
 	stroke-dashoffset: 224.5863037109375px;
 	animation: line-anim 2s ease forwards 4.5s}
-#logo path:nth-child(14){
+#logo path:nth-child(14){ /* N */
 	stroke-dasharray: 410px;
 	stroke-dashoffset: 410px;
 	animation: line-anim 2s ease forwards 4.75s}
