@@ -1,3 +1,4 @@
+@import "node_modules/bootstrap/scss/bootstrap";
 
 
 .js-loading *,
@@ -175,6 +176,6 @@
 @keyframes fill{
     from{ fill: transparent; }
 	to{ fill: white; }}
-#logo-title {
+.logo-title {
 	font-size: 5vw;
 }
